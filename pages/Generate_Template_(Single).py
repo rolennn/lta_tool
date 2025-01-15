@@ -2,6 +2,7 @@
 
 import shutil
 import os
+import glob
 
 import streamlit as st
 import test_process as tp
@@ -77,11 +78,17 @@ if (generate):
 	
 	# if there are sources, create .zip for ocr results
 	with_sources = (sources != [])
+	rootpath = os.path.join("_data", "from_ocr")
+	imgfiles = glob.glob(os.path.join(rootpath, "images", "*.png"))
+	txtfiles = glob.glob(os.path.join(rootpath, "texts", "*.txt"))
+	for imgfile in imgfiles:
+		os.remove(imgfile)
+	for txtfile in txtfiles:
+		os.remove(txtfile)
 	if (with_sources):
 		contents = test.process_ocr(sources)
 		num_content = len(contents)
 		
-		rootpath = os.path.join("_data", "from_ocr")
 		for (pair, i) in zip(contents, range(1, num_content+1)):
 			pair[0].save(os.path.join(rootpath, "images", f"page{i}.png"))
 			with open(os.path.join(rootpath, "texts", f"page{i}.txt"), "w+") as textfile:
