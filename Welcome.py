@@ -49,7 +49,7 @@ with st.expander(label="I want to GENERATE TEMPLATES (and typeset LTs)", expande
 	""")
 
 with st.expander(label="I want to TAG PROBLEMS", expanded=False, icon=":material/tag:"):
-	st.write("The following video discusses the tagging part of this webtool. Please note that for the sake of organization, you may only tag tests that have **already been typeset and published in the archive**.")
+	st.write("The following video discusses the tagging part of this webtool. Please note that for the sake of organization, you may only tag tests that have **already been typeset and published in the archive**. The list of these available tests can be found in the Tag Questions page.")
 	st.write("<video on TAGGING PROBLEM here>")
 
 
