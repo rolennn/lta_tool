@@ -1,0 +1,17 @@
+{
+	"course": [
+		"MATH 31.1 / MA 21", "MATH 31.2 / MA 21", "MATH 31.3 / MA 22", 
+		"MATH 31.4 / MA 101", "MATH 50.1 / MA 189", "MATH 51.1 / MA 124", 
+		"MATH 40.1 / MA 122", "MATH 61.2 / MA 151"
+	],
+	"tags": [
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"],
+		["tag1", "tag2", "tag3", "tag4", "tag5"]
+	]
+}                          

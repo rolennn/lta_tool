@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{lt_style}
+
+{% raw %}\ltheader{{% endraw %}{{ course_code }} {{ test_code }}}{ {{ professor }} }{ {{ exam_date }} }{Problems}
+
+
+\begin{document}
+
+\textbf{General instructions:} Show complete and clear solutions.
+
+\begin{enumerate}[before={\everymath{\displaystyle}}]
+	{{ problems[0] }}
+    {% for problem in problems[1:] %}
+    \item \label{itm:p{{ problem }}
+    {% endfor %}
+\end{enumerate}
+
+\begin{closing}
+    {% raw %}\textbf{{% endraw %}{{ filename }}}
+
+    \textbf{Notes:} \begin{enumerate}
+        \setlength\itemsep{-5pt}
+        \item[] All problems were prepared by the instructors indicated in the header. If are issues with the problems, these are most certainly due to an error by the typesetter. In this case, please inform us as soon as possible. 
+    \end{enumerate}
+\end{closing}
+
+\end{document}

@@ -1,0 +1,90 @@
+\usepackage[top=1.2in,left=.75in,right=.75in,bottom=1in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}  % general math symbols
+\usepackage{amssymb}  % mathbb
+\usepackage{amsthm}   % theoremstyle, newtheorem
+\usepackage{array}    % table adjustment
+%\usepackage{bm}       % bold and italicized matrices
+\usepackage[font=small]{caption}  % editing captions
+\usepackage{enumerate}
+\usepackage{enumitem} % label (in enumerate)
+\usepackage{float}    % for H specifier in tables and figures
+\usepackage{geometry} % a4paper + margin
+\usepackage{graphicx} % includegraphic
+\usepackage[geometry]{ifsym}
+\usepackage{marginnote}
+\usepackage{makecell} % split table cells
+\usepackage{minted}   % minted
+\usepackage{multicol} % multiple columns
+\usepackage{multirow}
+\usepackage{parskip}  % paragraph spacing
+\usepackage{setspace}
+\usepackage{siunitx}
+\usepackage{stmaryrd}
+%\usepackage{stix}     % for financial math
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{wasysym}
+\usepackage{xifthen}  % if, then, else
+\usepackage{xcolor}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{\tikz{\node[opacity=0.1]{\includegraphics{imgs/ams_logo.png}}}}
+\SetWatermarkScale{2}
+\SetWatermarkLightness{0.5}
+\SetWatermarkAngle{0}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+
+%% macros for shortcut
+\usepackage{fancyhdr}
+\newcommand\ltheader[4]{
+    \pagestyle{fancy}
+    \lhead{\textsf{\textbf{#1 \\ #2}}}
+    \rhead{\textsf{\textbf{#3 \\ #4}}}
+}
+\newcommand\pts[1]{\hfill \textbf{[#1]}}
+
+\newcommand\bb[1]{\mathbb{#1}}
+\newcommand\cc[1]{\mathcal{#1}}
+
+\newcommand\unsure[1]{\color{red}#1\color{black}}
+\newcommand\bigpar[1]{\left( #1 \right)}
+\newcommand\vmag[1]{\left| #1 \right|}
+\newcommand\vnorm[1]{\lVert #1 \rVert}
+\newcommand\vcom[1]{\left\langle #1 \right\rangle}
+\newcommand\vect[1]{\mathbf{#1}}
+\newcommand\setc[1]{\left\{ #1 \right\}}
+
+\newcommand\matb[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand\matv[1]{\begin{vmatrix} #1 \end{vmatrix}}
+
+\newcommand\df[2]{\frac{d#1}{d#2}}
+\newcommand\pd[2]{\frac{\partial #1}{\partial #2}}
+\newcommand\pdm[3]{\frac{\partial^#3 #1}{\partial #2^#3}}
+\newcommand\divf[1]{\text{div } #1}
+\newcommand\curlf[1]{\text{curl } #1}
+\newcommand\detv[1]{\text{det}\left(#1\right)}
+\newcommand\rankv[1]{\text{rank}\left(#1\right)}
+\newcommand\spanv[1]{\text{span}\left(#1\right)}
+\newcommand\rangev[1]{\text{range}\left(#1\right)}
+\newcommand\kerv[1]{\text{ker}\left(#1\right)}
+\newcommand\dimv[1]{\text{dim}\left(#1\right)}
+\newcommand\varx[1]{\text{Var}\left(#1\right)}
+
+\newcommand\nexts{\quad\Rightarrow\quad}
+\newcommand\ul{\uline{\hspace{2em}}}
+\newcommand\imagehere{\begin{center} \unsure{image here}\end{center}}
+
+\usepackage{mdframed}
+\newenvironment{solution}{\vspace{5pt} \begin{mdframed}[backgroundcolor=black!10,linewidth=0pt]}{\end{mdframed}}
+
+\newenvironment{closing}{\newpage\thispagestyle{empty} \sffamily}{\vspace{15pt} For any submissions or comments, please contact: \url{ams.acads.aet@gmail.com}.}
