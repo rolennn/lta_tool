@@ -16,13 +16,4 @@
     {% endfor %}
 \end{enumerate}
 
-\begin{closing}
-    {% raw %}\textbf{{% endraw %}{{ filename }}}
-
-    \textbf{Notes:} \begin{enumerate}
-        \setlength\itemsep{-5pt}
-        \item[] All problems were prepared by the instructors indicated in the header. If are issues with the problems, these are most certainly due to an error by the typesetter. In this case, please inform us as soon as possible. 
-    \end{enumerate}
-\end{closing}
-
 \end{document}

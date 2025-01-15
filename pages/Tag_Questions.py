@@ -31,6 +31,7 @@ DUMMY_CONTEXT = {
 	"num_probs": "1",
 	"professors": "Unknown",
 }
+
 with open(os.path.join("_data", "tags.json"), "r") as tags_file:
 	tags_dict = json.loads(tags_file.read())
 TAGS = pd.DataFrame(data=tags_dict)
@@ -104,6 +105,7 @@ with st.expander(label="open tests:", expanded=True, icon=":material/inventory_2
 		use_container_width=True,
 		hide_index=True,
 	)
+
 
 test = tp.Test(DUMMY_CONTEXT)
 for source in sources:
