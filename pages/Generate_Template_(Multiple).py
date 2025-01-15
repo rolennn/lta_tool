@@ -2,6 +2,7 @@
 
 import shutil
 import os
+import glob
 
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
@@ -93,11 +94,15 @@ editable_df = st.data_editor(
 if (generate):
 	df_dict = editable_df.to_dict("records")
 	
-	# create a .zip containing all template files
+	# create a .zip containing all template files;
+	# first remove all .tex files in the folder, then proceed 
+	# with generating the necessary files
 	rootpath = os.path.join("_data", "for_overleaf")
+	files = glob.glob(os.path.join(rootpath, "*.tex"))
+	for texfile in files:
+		os.remove(texfile)
 	for context in df_dict:
 		if (context['gen']):
-			print(context)
 			test = tp.Test(context)
 			with open(os.path.join(rootpath, f"{test.filename}.tex"), "w+") as template_file:
 				template_file.write(test.get_template())
